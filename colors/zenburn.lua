@@ -116,18 +116,24 @@ local highlights = {
 
 	StatusLine = { bg = c["bg-1"], fg = c["yellow"], bold = true },
 	StatusLineNC = { bg = c["bg-05"], fg = c["green+1"] },
-	Visual = { bg = c["bg-05"] },
+	Visual = { bg = c["bg-1"] },
 	SignColumn = { link = "LineNr" },
 	NormalNC = { link = "Normal" },
 
 	Pmenu = { fg = c["fg"], bg = c["bg+1"] },
 	PmenuSel = { fg = c["fg"], bg = c["bg+2"] },
 
+	TabLine = { fg = c["fg"], bg = c["bg-05"] },
+	TabLineFill = { bg = c["bg-05"] },
+	TabLineSel = { fg = c["fg"], bg = c["bg+1"], bold = true },
+
 	CmpItemAbbrMatch = { fg = c["yellow"] },
 
 	["@text.quote.markdown"] = { link = "Doc" },
 	["@text.strong"] = { bold = true },
 	["@text.emphasis"] = { italic = true },
+
+	["@variable.builtin"] = { fg = c["yellow"] },
 
 	texArg = { link = "Function" },
 	texPartArgTitle = { fg = c["red+2"], bold = true },
