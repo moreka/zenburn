@@ -73,7 +73,7 @@ local highlights = {
 
 	Identifier = { fg = c["orange"] },
 
-	Statement = { fg = c["yellow"] },
+	Statement = { fg = c["yellow"], bold = true },
 	-- Conditional	if, then, else, endif, switch, etc.
 	-- Repeat		for, do, while, etc.
 	-- Label		case, default, etc.
@@ -134,9 +134,19 @@ local highlights = {
 	["@text.emphasis"] = { italic = true },
 
 	["@variable.builtin"] = { fg = c["yellow"] },
+	["@function.builtin"] = { fg = c["fg"], bold = true },
+	["@constant.builtin"] = { link = "Constant" },
+	["@punctuation.bracket"] = { link = "Normal" },
+	["@punctuation.delimiter.python"] = { link = "Normal" },
+	["@operator"] = { link = "Normal" },
+	["@parameter"] = { link = "Normal" },
+
+	["@string.documentation"] = { link = "Comment" },
 
 	texArg = { link = "Function" },
 	texPartArgTitle = { fg = c["red+2"], bold = true },
+
+	DiagnosticUnnecessary = { fg = c["fg-05"], undercurl = true },
 }
 
 for g, h in pairs(highlights) do
