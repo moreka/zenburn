@@ -129,6 +129,11 @@ local highlights = {
 
 	CmpItemAbbrMatch = { fg = c["yellow"] },
 
+	texArg = { link = "Function" },
+	texPartArgTitle = { fg = c["red+2"], bold = true },
+
+	DiagnosticUnnecessary = { fg = c["fg-05"], undercurl = true },
+
 	["@text.quote.markdown"] = { link = "Doc" },
 	["@text.strong"] = { bold = true },
 	["@text.emphasis"] = { italic = true },
@@ -143,10 +148,9 @@ local highlights = {
 
 	["@string.documentation"] = { link = "Comment" },
 
-	texArg = { link = "Function" },
-	texPartArgTitle = { fg = c["red+2"], bold = true },
-
-	DiagnosticUnnecessary = { fg = c["fg-05"], undercurl = true },
+	["@neorg.todo_items.undone.norg"] = { fg = c["red-1"] },
+	["@neorg.links.file.norg"] = { fg = c["blue"] },
+	["@neorg.headings.1.title.norg"] = { fg = c["fg+1"], bold = true },
 }
 
 for g, h in pairs(highlights) do
