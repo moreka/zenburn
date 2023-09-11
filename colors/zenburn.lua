@@ -92,7 +92,7 @@ local highlights = {
 	-- Structure	struct, union, enum, etc.
 	-- Typedef	A typedef
 
-	-- Special	any special symbol
+	Special = { fg = c["orange"] },
 	-- SpecialChar	special character in a constant
 	-- Tag		you can use CTRL-] on this
 	-- SpecialComment	special things inside a comment
@@ -127,10 +127,14 @@ local highlights = {
 	TabLineFill = { bg = c["bg-05"] },
 	TabLineSel = { fg = c["fg"], bg = c["bg+1"], bold = true },
 
+  MatchParen = { bg = c["bg+3"], bold = true },
+
 	CmpItemAbbrMatch = { fg = c["yellow"] },
 
 	texArg = { link = "Function" },
 	texPartArgTitle = { fg = c["red+2"], bold = true },
+  texMathDelimZoneLD = { fg = c["green+1"] },
+  texMathDelimZoneTI = { link = "texMathDelimZoneLD" },
 
 	DiagnosticUnnecessary = { fg = c["fg-05"], undercurl = true },
 
