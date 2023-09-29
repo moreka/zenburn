@@ -127,14 +127,14 @@ local highlights = {
 	TabLineFill = { bg = c["bg-05"] },
 	TabLineSel = { fg = c["fg"], bg = c["bg+1"], bold = true },
 
-  MatchParen = { bg = c["bg+3"], bold = true },
+	MatchParen = { bg = c["bg+3"], bold = true },
 
 	CmpItemAbbrMatch = { fg = c["yellow"] },
 
 	texArg = { link = "Function" },
 	texPartArgTitle = { fg = c["red+2"], bold = true },
-  texMathDelimZoneLD = { fg = c["green+1"] },
-  texMathDelimZoneTI = { link = "texMathDelimZoneLD" },
+	texMathDelimZoneLD = { fg = c["green+1"] },
+	texMathDelimZoneTI = { link = "texMathDelimZoneLD" },
 
 	DiagnosticUnnecessary = { fg = c["fg-05"], undercurl = true },
 
@@ -155,6 +155,9 @@ local highlights = {
 	["@neorg.todo_items.undone.norg"] = { fg = c["red-1"] },
 	["@neorg.links.file.norg"] = { fg = c["blue"] },
 	["@neorg.headings.1.title.norg"] = { fg = c["fg+1"], bold = true },
+
+	["@variable.python"] = { link = "Normal" },
+	["@attribute"] = { fg = c["green+4"] },
 }
 
 for g, h in pairs(highlights) do
