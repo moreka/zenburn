@@ -56,7 +56,8 @@ local c = {
 
 local highlights = {
 	Normal = { fg = c["fg"], bg = c["bg"] },
-	Cursor = { fg = c["fg"], bg = c["fg+1"] },
+	Cursor = { fg = "#000d18", bg = "#8faf9f" },
+
 	Comment = { fg = c["green"] },
 	Delimiter = { fg = c["green-2"] },
 	Function = { fg = c["cyan"] },
@@ -135,6 +136,10 @@ local highlights = {
 	texPartArgTitle = { fg = c["red+2"], bold = true },
 	texMathDelimZoneLD = { fg = c["green+1"] },
 	texMathDelimZoneTI = { link = "texMathDelimZoneLD" },
+	texCmdPart = { fg = c["orange"], bold = true },
+	texMathCmd = { fg = c["yellow-1"] },
+	texEnvArgName = { fg = c["orange"], bold = true },
+	texMathEnvArgName = { link = "texEnvArgName" },
 
 	DiagnosticUnnecessary = { fg = c["fg-05"], undercurl = true },
 
@@ -158,6 +163,8 @@ local highlights = {
 
 	["@variable.python"] = { link = "Normal" },
 	["@attribute"] = { fg = c["green+4"] },
+
+	MiniStatuslineModeNormal = { link = "DiffChange" },
 }
 
 for g, h in pairs(highlights) do
